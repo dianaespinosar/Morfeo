@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MorfeoSpaceAppModelStoreContainer" CdmEntityContainer="MorfeoSpaceAppEntities">
+    <EntitySetMapping Name="Allergies">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Allergies">
+        <MappingFragment StoreEntitySet="Allergies">
+          <ScalarProperty Name="idAllergy" ColumnName="idAllergy" />
+          <ScalarProperty Name="allergy" ColumnName="allergy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="allergyAstr">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.allergyAstr">
+        <MappingFragment StoreEntitySet="allergyAstr">
+          <ScalarProperty Name="idAlAstr" ColumnName="idAlAstr" />
+          <ScalarProperty Name="idAllergy" ColumnName="idAllergy" />
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Astronaut">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Astronaut">
+        <MappingFragment StoreEntitySet="Astronaut">
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+          <ScalarProperty Name="idTrip" ColumnName="idTrip" />
+          <ScalarProperty Name="passw" ColumnName="passw" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="caffeineConsumption">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.caffeineConsumption">
+        <MappingFragment StoreEntitySet="caffeineConsumption">
+          <ScalarProperty Name="idCafCon" ColumnName="idCafCon" />
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+          <ScalarProperty Name="timeCons" ColumnName="timeCons" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chronicDiseaseAstr">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.chronicDiseaseAstr">
+        <MappingFragment StoreEntitySet="chronicDiseaseAstr">
+          <ScalarProperty Name="idCDAstr" ColumnName="idCDAstr" />
+          <ScalarProperty Name="idCD" ColumnName="idCD" />
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChronicDiseases">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.ChronicDiseases">
+        <MappingFragment StoreEntitySet="ChronicDiseases">
+          <ScalarProperty Name="idCD" ColumnName="idCD" />
+          <ScalarProperty Name="chrDis" ColumnName="chrDis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipment">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="idEquip" ColumnName="idEquip" />
+          <ScalarProperty Name="equip" ColumnName="equip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exercise">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Exercise">
+        <MappingFragment StoreEntitySet="Exercise">
+          <ScalarProperty Name="idExer" ColumnName="idExer" />
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+          <ScalarProperty Name="idEquip" ColumnName="idEquip" />
+          <ScalarProperty Name="starT" ColumnName="starT" />
+          <ScalarProperty Name="endT" ColumnName="endT" />
+          <ScalarProperty Name="forceAmount" ColumnName="forceAmount" />
+          <ScalarProperty Name="typeExe" ColumnName="typeExe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Food">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Food">
+        <MappingFragment StoreEntitySet="Food">
+          <ScalarProperty Name="idFood" ColumnName="idFood" />
+          <ScalarProperty Name="foodN" ColumnName="foodN" />
+          <ScalarProperty Name="typeFood" ColumnName="typeFood" />
+          <ScalarProperty Name="calories" ColumnName="calories" />
+          <ScalarProperty Name="vitamines" ColumnName="vitamines" />
+          <ScalarProperty Name="sodium" ColumnName="sodium" />
+          <ScalarProperty Name="protein" ColumnName="protein" />
+          <ScalarProperty Name="fiber" ColumnName="fiber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meals">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Meals">
+        <MappingFragment StoreEntitySet="Meals">
+          <ScalarProperty Name="idMeal" ColumnName="idMeal" />
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+          <ScalarProperty Name="idFood" ColumnName="idFood" />
+          <ScalarProperty Name="mealTime" ColumnName="mealTime" />
+          <ScalarProperty Name="mealType" ColumnName="mealType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedAstr">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.MedAstr">
+        <MappingFragment StoreEntitySet="MedAstr">
+          <ScalarProperty Name="idMedAstr" ColumnName="idMedAstr" />
+          <ScalarProperty Name="idMed" ColumnName="idMed" />
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedChrDis">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.MedChrDis">
+        <MappingFragment StoreEntitySet="MedChrDis">
+          <ScalarProperty Name="idMedCD" ColumnName="idMedCD" />
+          <ScalarProperty Name="idMed" ColumnName="idMed" />
+          <ScalarProperty Name="idCD" ColumnName="idCD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicines">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Medicines">
+        <MappingFragment StoreEntitySet="Medicines">
+          <ScalarProperty Name="idMed" ColumnName="idMed" />
+          <ScalarProperty Name="medicine" ColumnName="medicine" />
+          <ScalarProperty Name="typeAdm" ColumnName="typeAdm" />
+          <ScalarProperty Name="purpose" ColumnName="purpose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sleep">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Sleep">
+        <MappingFragment StoreEntitySet="Sleep">
+          <ScalarProperty Name="idSleep" ColumnName="idSleep" />
+          <ScalarProperty Name="idAstr" ColumnName="idAstr" />
+          <ScalarProperty Name="bedTime" ColumnName="bedTime" />
+          <ScalarProperty Name="wakeupTime" ColumnName="wakeupTime" />
+          <ScalarProperty Name="interruptions" ColumnName="interruptions" />
+          <ScalarProperty Name="reasns" ColumnName="reasns" />
+          <ScalarProperty Name="deepSleep" ColumnName="deepSleep" />
+          <ScalarProperty Name="light" ColumnName="light" />
+          <ScalarProperty Name="circadianCycle" ColumnName="circadianCycle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trip">
+      <EntityTypeMapping TypeName="MorfeoSpaceAppModel.Trip">
+        <MappingFragment StoreEntitySet="Trip">
+          <ScalarProperty Name="idTrip" ColumnName="idTrip" />
+          <ScalarProperty Name="launch" ColumnName="launch" />
+          <ScalarProperty Name="arrivalTime" ColumnName="arrivalTime" />
+          <ScalarProperty Name="lauchPlace" ColumnName="lauchPlace" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

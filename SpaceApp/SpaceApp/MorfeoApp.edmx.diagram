@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37b7001c69f94852accfa39548639d97" Name="Diagram1">
+        <EntityTypeShape EntityType="MorfeoAppModel.Allergies" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.allergyAstr" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Astronaut" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.caffeineConsumption" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.chronicDiseaseAstr" Width="1.5" PointX="8.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.ChronicDiseases" Width="1.5" PointX="6" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Equipment" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Exercise" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Food" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Meals" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.MedAstr" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.MedChrDis" Width="1.5" PointX="8.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Medicines" Width="1.5" PointX="6" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Sleep" Width="1.5" PointX="5.25" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MorfeoAppModel.Trip" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="MorfeoAppModel.FK__allergyAs__idAll__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__allergyAs__idAst__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__Astronaut__idTri__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__caffeineC__idAst__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__chronicDi__idAst__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__Exercise__idAstr__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__Meals__idAstr__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__MedAstr__idAstr__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__Sleep__idAstr__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__chronicDis__idCD__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__MedChrDis__idCD__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__Exercise__idEqui__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__Meals__idFood__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__MedAstr__idMed__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="MorfeoAppModel.FK__MedChrDis__idMed__267ABA7A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

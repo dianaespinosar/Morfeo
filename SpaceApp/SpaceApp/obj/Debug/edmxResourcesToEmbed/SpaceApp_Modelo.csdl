@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MorfeoSpaceAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Allergies">
+    <Key>
+      <PropertyRef Name="idAllergy" />
+    </Key>
+    <Property Name="idAllergy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="allergy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="allergyAstr" Relationship="Self.FK__allergyAs__idAll__1B0907CE" FromRole="Allergies" ToRole="allergyAstr" />
+  </EntityType>
+  <EntityType Name="allergyAstr">
+    <Key>
+      <PropertyRef Name="idAlAstr" />
+    </Key>
+    <Property Name="idAlAstr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idAllergy" Type="Int32" />
+    <Property Name="idAstr" Type="Int32" />
+    <NavigationProperty Name="Allergies" Relationship="Self.FK__allergyAs__idAll__1B0907CE" FromRole="allergyAstr" ToRole="Allergies" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__allergyAs__idAst__1BFD2C07" FromRole="allergyAstr" ToRole="Astronaut" />
+  </EntityType>
+  <EntityType Name="Astronaut">
+    <Key>
+      <PropertyRef Name="idAstr" />
+    </Key>
+    <Property Name="idAstr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idTrip" Type="Int32" />
+    <Property Name="passw" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="surname" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="birth" Type="DateTime" Precision="3" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="weight" Type="Int32" />
+    <Property Name="height" Type="Int32" />
+    <Property Name="nationality" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="allergyAstr" Relationship="Self.FK__allergyAs__idAst__1BFD2C07" FromRole="Astronaut" ToRole="allergyAstr" />
+    <NavigationProperty Name="Trip" Relationship="Self.FK__Astronaut__idTri__1273C1CD" FromRole="Astronaut" ToRole="Trip" />
+    <NavigationProperty Name="caffeineConsumption" Relationship="Self.FK__caffeineC__idAst__30F848ED" FromRole="Astronaut" ToRole="caffeineConsumption" />
+    <NavigationProperty Name="chronicDiseaseAstr" Relationship="Self.FK__chronicDi__idAst__1FCDBCEB" FromRole="Astronaut" ToRole="chronicDiseaseAstr" />
+    <NavigationProperty Name="Exercise" Relationship="Self.FK__Exercise__idAstr__3A81B327" FromRole="Astronaut" ToRole="Exercise" />
+    <NavigationProperty Name="Meals" Relationship="Self.FK__Meals__idAstr__2C3393D0" FromRole="Astronaut" ToRole="Meals" />
+    <NavigationProperty Name="MedAstr" Relationship="Self.FK__MedAstr__idAstr__239E4DCF" FromRole="Astronaut" ToRole="MedAstr" />
+    <NavigationProperty Name="Sleep" Relationship="Self.FK__Sleep__idAstr__33D4B598" FromRole="Astronaut" ToRole="Sleep" />
+  </EntityType>
+  <EntityType Name="caffeineConsumption">
+    <Key>
+      <PropertyRef Name="idCafCon" />
+    </Key>
+    <Property Name="idCafCon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idAstr" Type="Int32" />
+    <Property Name="timeCons" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__caffeineC__idAst__30F848ED" FromRole="caffeineConsumption" ToRole="Astronaut" />
+  </EntityType>
+  <EntityType Name="chronicDiseaseAstr">
+    <Key>
+      <PropertyRef Name="idCDAstr" />
+    </Key>
+    <Property Name="idCDAstr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCD" Type="Int32" />
+    <Property Name="idAstr" Type="Int32" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__chronicDi__idAst__1FCDBCEB" FromRole="chronicDiseaseAstr" ToRole="Astronaut" />
+    <NavigationProperty Name="ChronicDiseases" Relationship="Self.FK__chronicDis__idCD__1ED998B2" FromRole="chronicDiseaseAstr" ToRole="ChronicDiseases" />
+  </EntityType>
+  <EntityType Name="ChronicDiseases">
+    <Key>
+      <PropertyRef Name="idCD" />
+    </Key>
+    <Property Name="idCD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chrDis" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="chronicDiseaseAstr" Relationship="Self.FK__chronicDis__idCD__1ED998B2" FromRole="ChronicDiseases" ToRole="chronicDiseaseAstr" />
+    <NavigationProperty Name="MedChrDis" Relationship="Self.FK__MedChrDis__idCD__276EDEB3" FromRole="ChronicDiseases" ToRole="MedChrDis" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="idEquip" />
+    </Key>
+    <Property Name="idEquip" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="equip" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Exercise" Relationship="Self.FK__Exercise__idEqui__3B75D760" FromRole="Equipment" ToRole="Exercise" />
+  </EntityType>
+  <EntityType Name="Exercise">
+    <Key>
+      <PropertyRef Name="idExer" />
+    </Key>
+    <Property Name="idExer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idAstr" Type="Int32" />
+    <Property Name="idEquip" Type="Int16" />
+    <Property Name="starT" Type="DateTime" Precision="3" />
+    <Property Name="endT" Type="DateTime" Precision="3" />
+    <Property Name="forceAmount" Type="Int32" />
+    <Property Name="typeExe" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__Exercise__idAstr__3A81B327" FromRole="Exercise" ToRole="Astronaut" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK__Exercise__idEqui__3B75D760" FromRole="Exercise" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="Food">
+    <Key>
+      <PropertyRef Name="idFood" />
+    </Key>
+    <Property Name="idFood" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="foodN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="typeFood" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="calories" Type="Int32" />
+    <Property Name="vitamines" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sodium" Type="Int32" />
+    <Property Name="protein" Type="Int32" />
+    <Property Name="fiber" Type="Int32" />
+    <NavigationProperty Name="Meals" Relationship="Self.FK__Meals__idFood__2D27B809" FromRole="Food" ToRole="Meals" />
+  </EntityType>
+  <EntityType Name="Meals">
+    <Key>
+      <PropertyRef Name="idMeal" />
+    </Key>
+    <Property Name="idMeal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idAstr" Type="Int32" />
+    <Property Name="idFood" Type="Int32" />
+    <Property Name="mealTime" Type="DateTime" Precision="3" />
+    <Property Name="mealType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__Meals__idAstr__2C3393D0" FromRole="Meals" ToRole="Astronaut" />
+    <NavigationProperty Name="Food" Relationship="Self.FK__Meals__idFood__2D27B809" FromRole="Meals" ToRole="Food" />
+  </EntityType>
+  <EntityType Name="MedAstr">
+    <Key>
+      <PropertyRef Name="idMedAstr" />
+    </Key>
+    <Property Name="idMedAstr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMed" Type="Int32" />
+    <Property Name="idAstr" Type="Int32" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__MedAstr__idAstr__239E4DCF" FromRole="MedAstr" ToRole="Astronaut" />
+    <NavigationProperty Name="Medicines" Relationship="Self.FK__MedAstr__idMed__22AA2996" FromRole="MedAstr" ToRole="Medicines" />
+  </EntityType>
+  <EntityType Name="MedChrDis">
+    <Key>
+      <PropertyRef Name="idMedCD" />
+    </Key>
+    <Property Name="idMedCD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMed" Type="Int32" />
+    <Property Name="idCD" Type="Int32" />
+    <NavigationProperty Name="ChronicDiseases" Relationship="Self.FK__MedChrDis__idCD__276EDEB3" FromRole="MedChrDis" ToRole="ChronicDiseases" />
+    <NavigationProperty Name="Medicines" Relationship="Self.FK__MedChrDis__idMed__267ABA7A" FromRole="MedChrDis" ToRole="Medicines" />
+  </EntityType>
+  <EntityType Name="Medicines">
+    <Key>
+      <PropertyRef Name="idMed" />
+    </Key>
+    <Property Name="idMed" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="medicine" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="typeAdm" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="purpose" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MedAstr" Relationship="Self.FK__MedAstr__idMed__22AA2996" FromRole="Medicines" ToRole="MedAstr" />
+    <NavigationProperty Name="MedChrDis" Relationship="Self.FK__MedChrDis__idMed__267ABA7A" FromRole="Medicines" ToRole="MedChrDis" />
+  </EntityType>
+  <EntityType Name="Sleep">
+    <Key>
+      <PropertyRef Name="idSleep" />
+    </Key>
+    <Property Name="idSleep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idAstr" Type="Int32" />
+    <Property Name="bedTime" Type="DateTime" Precision="3" />
+    <Property Name="wakeupTime" Type="DateTime" Precision="3" />
+    <Property Name="interruptions" Type="Int32" />
+    <Property Name="reasns" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="deepSleep" Type="Boolean" Nullable="false" />
+    <Property Name="light" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="circadianCycle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__Sleep__idAstr__33D4B598" FromRole="Sleep" ToRole="Astronaut" />
+  </EntityType>
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="idTrip" />
+    </Key>
+    <Property Name="idTrip" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="launch" Type="DateTime" Precision="3" />
+    <Property Name="arrivalTime" Type="DateTime" Precision="3" />
+    <Property Name="lauchPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Astronaut" Relationship="Self.FK__Astronaut__idTri__1273C1CD" FromRole="Trip" ToRole="Astronaut" />
+  </EntityType>
+  <Association Name="FK__allergyAs__idAll__1B0907CE">
+    <End Role="Allergies" Type="Self.Allergies" Multiplicity="0..1" />
+    <End Role="allergyAstr" Type="Self.allergyAstr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Allergies">
+        <PropertyRef Name="idAllergy" />
+      </Principal>
+      <Dependent Role="allergyAstr">
+        <PropertyRef Name="idAllergy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__allergyAs__idAst__1BFD2C07">
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="0..1" />
+    <End Role="allergyAstr" Type="Self.allergyAstr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Astronaut">
+        <PropertyRef Name="idAstr" />
+      </Principal>
+      <Dependent Role="allergyAstr">
+        <PropertyRef Name="idAstr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Astronaut__idTri__1273C1CD">
+    <End Role="Trip" Type="Self.Trip" Multiplicity="0..1" />
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trip">
+        <PropertyRef Name="idTrip" />
+      </Principal>
+      <Dependent Role="Astronaut">
+        <PropertyRef Name="idTrip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__caffeineC__idAst__30F848ED">
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="0..1" />
+    <End Role="caffeineConsumption" Type="Self.caffeineConsumption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Astronaut">
+        <PropertyRef Name="idAstr" />
+      </Principal>
+      <Dependent Role="caffeineConsumption">
+        <PropertyRef Name="idAstr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__chronicDi__idAst__1FCDBCEB">
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="0..1" />
+    <End Role="chronicDiseaseAstr" Type="Self.chronicDiseaseAstr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Astronaut">
+        <PropertyRef Name="idAstr" />
+      </Principal>
+      <Dependent Role="chronicDiseaseAstr">
+        <PropertyRef Name="idAstr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Exercise__idAstr__3A81B327">
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="0..1" />
+    <End Role="Exercise" Type="Self.Exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Astronaut">
+        <PropertyRef Name="idAstr" />
+      </Principal>
+      <Dependent Role="Exercise">
+        <PropertyRef Name="idAstr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Meals__idAstr__2C3393D0">
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="0..1" />
+    <End Role="Meals" Type="Self.Meals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Astronaut">
+        <PropertyRef Name="idAstr" />
+      </Principal>
+      <Dependent Role="Meals">
+        <PropertyRef Name="idAstr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedAstr__idAstr__239E4DCF">
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="0..1" />
+    <End Role="MedAstr" Type="Self.MedAstr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Astronaut">
+        <PropertyRef Name="idAstr" />
+      </Principal>
+      <Dependent Role="MedAstr">
+        <PropertyRef Name="idAstr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sleep__idAstr__33D4B598">
+    <End Role="Astronaut" Type="Self.Astronaut" Multiplicity="0..1" />
+    <End Role="Sleep" Type="Self.Sleep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Astronaut">
+        <PropertyRef Name="idAstr" />
+      </Principal>
+      <Dependent Role="Sleep">
+        <PropertyRef Name="idAstr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__chronicDis__idCD__1ED998B2">
+    <End Role="ChronicDiseases" Type="Self.ChronicDiseases" Multiplicity="0..1" />
+    <End Role="chronicDiseaseAstr" Type="Self.chronicDiseaseAstr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronicDiseases">
+        <PropertyRef Name="idCD" />
+      </Principal>
+      <Dependent Role="chronicDiseaseAstr">
+        <PropertyRef Name="idCD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedChrDis__idCD__276EDEB3">
+    <End Role="ChronicDiseases" Type="Self.ChronicDiseases" Multiplicity="0..1" />
+    <End Role="MedChrDis" Type="Self.MedChrDis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChronicDiseases">
+        <PropertyRef Name="idCD" />
+      </Principal>
+      <Dependent Role="MedChrDis">
+        <PropertyRef Name="idCD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Exercise__idEqui__3B75D760">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+    <End Role="Exercise" Type="Self.Exercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="idEquip" />
+      </Principal>
+      <Dependent Role="Exercise">
+        <PropertyRef Name="idEquip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Meals__idFood__2D27B809">
+    <End Role="Food" Type="Self.Food" Multiplicity="0..1" />
+    <End Role="Meals" Type="Self.Meals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Food">
+        <PropertyRef Name="idFood" />
+      </Principal>
+      <Dependent Role="Meals">
+        <PropertyRef Name="idFood" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedAstr__idMed__22AA2996">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="0..1" />
+    <End Role="MedAstr" Type="Self.MedAstr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="idMed" />
+      </Principal>
+      <Dependent Role="MedAstr">
+        <PropertyRef Name="idMed" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedChrDis__idMed__267ABA7A">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="0..1" />
+    <End Role="MedChrDis" Type="Self.MedChrDis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="idMed" />
+      </Principal>
+      <Dependent Role="MedChrDis">
+        <PropertyRef Name="idMed" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MorfeoSpaceAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Allergies" EntityType="Self.Allergies" />
+    <EntitySet Name="allergyAstr" EntityType="Self.allergyAstr" />
+    <EntitySet Name="Astronaut" EntityType="Self.Astronaut" />
+    <EntitySet Name="caffeineConsumption" EntityType="Self.caffeineConsumption" />
+    <EntitySet Name="chronicDiseaseAstr" EntityType="Self.chronicDiseaseAstr" />
+    <EntitySet Name="ChronicDiseases" EntityType="Self.ChronicDiseases" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" />
+    <EntitySet Name="Exercise" EntityType="Self.Exercise" />
+    <EntitySet Name="Food" EntityType="Self.Food" />
+    <EntitySet Name="Meals" EntityType="Self.Meals" />
+    <EntitySet Name="MedAstr" EntityType="Self.MedAstr" />
+    <EntitySet Name="MedChrDis" EntityType="Self.MedChrDis" />
+    <EntitySet Name="Medicines" EntityType="Self.Medicines" />
+    <EntitySet Name="Sleep" EntityType="Self.Sleep" />
+    <EntitySet Name="Trip" EntityType="Self.Trip" />
+    <AssociationSet Name="FK__allergyAs__idAll__1B0907CE" Association="Self.FK__allergyAs__idAll__1B0907CE">
+      <End Role="Allergies" EntitySet="Allergies" />
+      <End Role="allergyAstr" EntitySet="allergyAstr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__allergyAs__idAst__1BFD2C07" Association="Self.FK__allergyAs__idAst__1BFD2C07">
+      <End Role="Astronaut" EntitySet="Astronaut" />
+      <End Role="allergyAstr" EntitySet="allergyAstr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Astronaut__idTri__1273C1CD" Association="Self.FK__Astronaut__idTri__1273C1CD">
+      <End Role="Trip" EntitySet="Trip" />
+      <End Role="Astronaut" EntitySet="Astronaut" />
+    </AssociationSet>
+    <AssociationSet Name="FK__caffeineC__idAst__30F848ED" Association="Self.FK__caffeineC__idAst__30F848ED">
+      <End Role="Astronaut" EntitySet="Astronaut" />
+      <End Role="caffeineConsumption" EntitySet="caffeineConsumption" />
+    </AssociationSet>
+    <AssociationSet Name="FK__chronicDi__idAst__1FCDBCEB" Association="Self.FK__chronicDi__idAst__1FCDBCEB">
+      <End Role="Astronaut" EntitySet="Astronaut" />
+      <End Role="chronicDiseaseAstr" EntitySet="chronicDiseaseAstr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Exercise__idAstr__3A81B327" Association="Self.FK__Exercise__idAstr__3A81B327">
+      <End Role="Astronaut" EntitySet="Astronaut" />
+      <End Role="Exercise" EntitySet="Exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Meals__idAstr__2C3393D0" Association="Self.FK__Meals__idAstr__2C3393D0">
+      <End Role="Astronaut" EntitySet="Astronaut" />
+      <End Role="Meals" EntitySet="Meals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedAstr__idAstr__239E4DCF" Association="Self.FK__MedAstr__idAstr__239E4DCF">
+      <End Role="Astronaut" EntitySet="Astronaut" />
+      <End Role="MedAstr" EntitySet="MedAstr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sleep__idAstr__33D4B598" Association="Self.FK__Sleep__idAstr__33D4B598">
+      <End Role="Astronaut" EntitySet="Astronaut" />
+      <End Role="Sleep" EntitySet="Sleep" />
+    </AssociationSet>
+    <AssociationSet Name="FK__chronicDis__idCD__1ED998B2" Association="Self.FK__chronicDis__idCD__1ED998B2">
+      <End Role="ChronicDiseases" EntitySet="ChronicDiseases" />
+      <End Role="chronicDiseaseAstr" EntitySet="chronicDiseaseAstr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedChrDis__idCD__276EDEB3" Association="Self.FK__MedChrDis__idCD__276EDEB3">
+      <End Role="ChronicDiseases" EntitySet="ChronicDiseases" />
+      <End Role="MedChrDis" EntitySet="MedChrDis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Exercise__idEqui__3B75D760" Association="Self.FK__Exercise__idEqui__3B75D760">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="Exercise" EntitySet="Exercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Meals__idFood__2D27B809" Association="Self.FK__Meals__idFood__2D27B809">
+      <End Role="Food" EntitySet="Food" />
+      <End Role="Meals" EntitySet="Meals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedAstr__idMed__22AA2996" Association="Self.FK__MedAstr__idMed__22AA2996">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="MedAstr" EntitySet="MedAstr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedChrDis__idMed__267ABA7A" Association="Self.FK__MedChrDis__idMed__267ABA7A">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="MedChrDis" EntitySet="MedChrDis" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

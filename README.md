@@ -9,5 +9,5 @@ Los humanos necesitan 8 horas de sueño para llevar acabo de manera eficiente la
 
 ## Información general
 ## Capturas de Pantalla
-
+![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Info.JPG "Información")
 ## Inspiración

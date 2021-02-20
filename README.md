@@ -33,15 +33,29 @@ Creamos la interfaz en Visual Studio con C #. El proyecto tiene una página de i
 
 **Ejercicio:** la aplicación automáticamente da el horario de ejercicio.
 
-**Viaje:** dada la importancia de estar descansados, en esta sección se encuentra el itinerario con las horas de dormir que debe seguir el astronauta antes del lanzamiento. Con el objetivo de evitar el jetlag y que se adapten mejor a su nuevo horario de sueño.
+**Información del viaje:** dada la importancia de estar descansados, en esta sección se encuentra el itinerario con las horas de dormir que debe seguir el astronauta antes del lanzamiento. Con el objetivo de evitar el jetlag y que se adapten mejor a su nuevo horario de sueño.
 
 **Cerrar sesión:** esto es para cerrar sesión en Morfeo.
 
 Todos los cambios se guardan automáticamente en nuestra base de datos.
 
 ## Capturas de Pantalla
+### Perfil
+
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoAstro.JPG "Astronauta")
+### Comida
+
+![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Meal.JPG "Comida")
+### Sueño
+
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Info.JPG "Información")
+
+### Ejercicio
+
+![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Ejercicio.JPG "Ejercicio")
+### Información del viaje
+
+![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/TripInformationEast.JPG "Viaje")
 
 ## Información de interés
 Los ritmos circadianos regulan los cambios en las características físicas y mentales que ocurren en el transcurso de un día. El reloj biológico de su organismo controla la mayoría de los ritmos circadianos. Este reloj se encuentra en una región del cerebro llamada hipotálamo. El cambio en la melatonina durante el ciclo sueño/vigilia refleja los ritmos circadianos. El hipotálamo también controla los cambios en la temperatura corporal y la presión arterial que ocurren durante el sueño.

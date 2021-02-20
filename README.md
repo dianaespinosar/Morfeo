@@ -13,16 +13,35 @@ Se desarrolló un algoritmo capaz de reducir el efecto jetlag, a través de un h
 
 Asimismo, se programó una función para medir la distancia entre los picos de una señal de ECG, para definir las diferentes etapas del sueño y así poder conocer cuánto tiempo de sueño profundo y sueño ligero tiene el astronauta para asegurar determinar si está descansando lo suficiente. Con base a esto se planea desarrollar una pulsera con fotodiodos que obtenga la señal del usuario para guardar toda la información de su viaje al espacio.
 
-## Diagrama con relación de tablas
+## Diagrama relacional
 Se creó una base de datos relacional en SQL Server. Esta base de datos tiene 17 tablas. La base de datos está conectada a una interfaz (hecha en Visual Studio), por lo que es fácil para el usuario registrar su información.
 
 Este diagrama muestra la relación entre las tablas.
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoDiagram.png "Diagrama de relación")
 
+##Interfaz
+Creamos la interfaz en Visual Studio con C #. El proyecto tiene una página de inicio de sesión, para acceder a su nombre de usuario y contraseña debe estar en la base de datos. Una vez que haya iniciado sesión, existen diferentes opciones, puede elegir entre algunas opciones:
+![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MainWindow.JPG "MainWindow")
 
-Los ritmos circadianos regulan los cambios en las características físicas y mentales que ocurren en el transcurso de un día. El reloj biológico de su organismo controla la mayoría de los ritmos circadianos. Este reloj se encuentra en una región del cerebro llamada hipotálamo. El cambio en la melatonina durante el ciclo sueño/vigilia refleja los ritmos circadianos. El hipotálamo también controla los cambios en la temperatura corporal y la presión arterial que ocurren durante el sueño.
-Para estimar la fase circadiana usaremos el software de simulación de desempeño circadiano ((CPSS versión 2.1, Brigham y Women’s Hospital, Boston, MA, EE. UU.) La mayoría de las variables que se están considerando tienen una entrada en esta interfaz, pero hay otras variables como la exposición a la luz que calcularse utilizando un sensor de luz.
+
+**Perfil:** esta ventana muestra la información personal del astronauta.
+
+**Comidas:** se registra cada una de las comidas: la hora y el tipo de comida.
+
+**Sueño:** se registra cómo fue su sueño, la hora a la que se fueron a dormir, a qué hora se despertaron, si se despertaron durante la noche y las razones por las que esto sucedió. También responden qué tipo de luz usaban, si tenían música y si usaron pastillas para dormir. Se generó un método en MatLab que dice cuántas horas estuvieron en sueño profundo. En caso de que el astronauta haya tenido menos de 6:30 horas, la aplicación programa automáticamente una siesta teniendo en cuenta su rutina de ejercicios.
+
+**Ejercicio:** la aplicación automáticamente da el horario de ejercicio.
+
+**Viaje:** dada la importancia de estar descansados, en esta sección se encuentra el itinerario con las horas de dormir que debe seguir el astronauta antes del lanzamiento. Con el objetivo de evitar el jetlag y que se adapten mejor a su nuevo horario de sueño.
+
+**Cerrar sesión:** esto es para cerrar sesión en Morfeo.
+
+Todos los cambios se guardan automáticamente en nuestra base de datos.
+
 ## Capturas de Pantalla
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoAstro.JPG "Astronauta")
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Info.JPG "Información")
-## Inspiración
+
+## Información de interés
+Los ritmos circadianos regulan los cambios en las características físicas y mentales que ocurren en el transcurso de un día. El reloj biológico de su organismo controla la mayoría de los ritmos circadianos. Este reloj se encuentra en una región del cerebro llamada hipotálamo. El cambio en la melatonina durante el ciclo sueño/vigilia refleja los ritmos circadianos. El hipotálamo también controla los cambios en la temperatura corporal y la presión arterial que ocurren durante el sueño.
+Para estimar la fase circadiana usaremos el software de simulación de desempeño circadiano ((CPSS versión 2.1, Brigham y Women’s Hospital, Boston, MA, EE. UU.) La mayoría de las variables que se están considerando tienen una entrada en esta interfaz, pero hay otras variables como la exposición a la luz que calcularse utilizando un sensor de luz.

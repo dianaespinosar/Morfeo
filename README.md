@@ -17,7 +17,7 @@ Asimismo, se programó una función para medir la distancia entre los picos de u
 Se creó una base de datos relacional en SQL Server. Esta base de datos tiene 17 tablas. La base de datos está conectada a una interfaz (hecha en Visual Studio), por lo que es fácil para el usuario registrar su información.
 
 Este diagrama muestra la relación entre las tablas.
-![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoDiagram.png "Diagrama de relación)
+![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoDiagram.png "Diagrama de relación")
 
 
 Los ritmos circadianos regulan los cambios en las características físicas y mentales que ocurren en el transcurso de un día. El reloj biológico de su organismo controla la mayoría de los ritmos circadianos. Este reloj se encuentra en una región del cerebro llamada hipotálamo. El cambio en la melatonina durante el ciclo sueño/vigilia refleja los ritmos circadianos. El hipotálamo también controla los cambios en la temperatura corporal y la presión arterial que ocurren durante el sueño.

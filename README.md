@@ -7,4 +7,7 @@ Los humanos necesitan 8 horas de sueño para llevar acabo de manera eficiente la
 - [Inspiración]()
 - [Video de YouTube](https://youtu.be/KdlvJBqiytc)
 
-##Información general
+## Información general
+## Capturas de Pantalla
+
+## Inspiración

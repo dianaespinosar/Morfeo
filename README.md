@@ -19,8 +19,9 @@ Se creó una base de datos relacional en SQL Server. Esta base de datos tiene 17
 Este diagrama muestra la relación entre las tablas.
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoDiagram.png "Diagrama de relación")
 
-##Interfaz
+## Interfaz
 Creamos la interfaz en Visual Studio con C #. El proyecto tiene una página de inicio de sesión, para acceder a su nombre de usuario y contraseña debe estar en la base de datos. Una vez que haya iniciado sesión, existen diferentes opciones, puede elegir entre algunas opciones:
+
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MainWindow.JPG "MainWindow")
 
 

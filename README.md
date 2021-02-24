@@ -1,6 +1,4 @@
-# Morfeo
-**NASA´s Space App Challenge 2020, equipo Hydrus**. 
-
+# Morfeo - NASA´s Space App Challenge 2020, equipo Hydrus. 
 Los humanos necesitan 8 horas de sueño para llevar acabo de manera eficiente las actividades del día y mantenenerse saludables. Muchas estudios llevados a cabo por la NASA y MMR, muestran que los astronautos duermen en promedio 6 horas diarias, lo que genera fatiga, disminusión en la actividad cognitiva y las habilidades motoras. Morfeo es una aplicación diseñada para ayudar a los austrnautos a mejorar su calidad de sueño. La idea es monitorear cuanto dura cada fase del sueño, su alimentación, el ejercicio que realiza, si consume medicamentos y la descomposición horaria que puede presentarse al llegar a la estación espacial. 
 
 ## Tabla de contenido
@@ -27,7 +25,7 @@ Asimismo, se programó una función para medir la distancia entre los picos de u
 ## Diagrama relacional
 Se creó una base de datos relacional en SQL Server. Esta base de datos tiene 17 tablas. La base de datos está conectada a una interfaz (hecha en Visual Studio), por lo que es fácil para el usuario registrar su información.
 
-Este diagrama muestra la relación entre las tablas.
+El siguiente diagrama muestra la relación entre las tablas.
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoDiagram.png "Diagrama de relación")
 
 ## Interfaz

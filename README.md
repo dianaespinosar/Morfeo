@@ -1,16 +1,18 @@
 # Morfeo 
 
-Morfeo es una aplicación diseñada para ayudar a los austrnautos a mejorar su calidad de sueño. La idea es monitorear cuanto dura cada fase del sueño, su alimentación, el ejercicio que realiza, si consume medicamentos y la descomposición horaria que puede presentarse al llegar a la estación espacial. 
+Morfeo es una aplicación diseñada para ayudar a los austrnautos a mejorar su calidad de sueño. El propósito es monitorear cuanto dura cada fase del sueño, su alimentación, el ejercicio que realiza, si consume medicamentos y la descomposición horaria que puede presentarse al llegar a la estación espacial. 
 
 Esta app fue elaborada para **NASA´s Space App Challenge 2020, equipo Hydrus**. La motivación de este proyecto surge debido a que los humanos necesitan 8 horas de sueño para llevar acabo de manera eficiente las actividades del día y mantenenerse saludables. Muchas estudios llevados a cabo por la NASA y MMR, muestran que los astronautos duermen en promedio 6 horas diarias, lo que genera fatiga, disminusión en la actividad cognitiva y las habilidades motoras. 
 
 ## Tabla de contenido
-- Información General
+* [Información General](#item1)
+- 
 - Herramientas, lenguaje de codificación y software utilizados 
 - Diagrama relacional 
 - Capturas de Pantalla
 - Video de YouTube
 
+<a name="item1"></a>
 ## Información general
 Se desarrolló un algoritmo capaz de reducir el efecto jetlag, a través de un horario que indica las horas recomendadas para que el usuario comience y finalice su día, así como el horario sugerido para que se exponga a una luz azul de menor intensidad conocida por su capacidad para inducir el sueño. El objetivo es que cuando el usuario llegue a su destino (estación espacial) solo le lleve dos días en adaptarse a la nueva zona horaria. Además, el algoritmo puede establecer una rutina de sueño en determinada cantidad de días, aumentando o disminuyendo una hora, dependiendo del sentido de su viaje (este +1, oeste -1).
 

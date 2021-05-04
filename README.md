@@ -6,11 +6,10 @@ Esta app fue elaborada para **NASA´s Space App Challenge 2020, equipo Hydrus**.
 
 ## Tabla de contenido
 * [Información General](#item1)
-- 
-- Herramientas, lenguaje de codificación y software utilizados 
-- Diagrama relacional 
-- Capturas de Pantalla
-- Video de YouTube
+* [Lenguajes, herramientas y software utilizados](#item2)
+* [Diagrama relacional](#item3)
+* [Capturas de Pantalla](#item4)
+* [Video de YouTube](#item5)
 
 <a name="item1"></a>
 ## Información general
@@ -18,7 +17,8 @@ Se desarrolló un algoritmo capaz de reducir el efecto jetlag, a través de un h
 
 Asimismo, se programó una función para medir la distancia entre los picos de una señal de ECG. Así se podrá definir las diferentes etapas del sueño y poder conocer cuánto tiempo de sueño profundo y sueño ligero tiene el astronauta y determinar si está descansando lo suficiente. Con base en esto se planea desarrollar una pulsera con fotodiodos que obtenga la señal del usuario para guardar toda la información de su viaje al espacio.
 
-## Herramientas, lenguaje de codificación y software utilizados
+<a name="item2"></a>
+## Lenguajes, herramientas y software utilizados
 - Java
 - Matlab 
 - SQL Server(relational data base)
@@ -27,14 +27,16 @@ Asimismo, se programó una función para medir la distancia entre los picos de u
 - Entity Framework 
 - ODBC
 
+<a name="item3"></a>
 ## Diagrama relacional
 Se creó una base de datos relacional en SQL Server. Esta base de datos tiene 17 tablas. La base de datos está conectada a una interfaz (hecha en Visual Studio), por lo que es fácil para el usuario registrar su información.
 
-El siguiente diagrama muestra la relación entre las tablas.
+El siguiente diagrama muestra la relación entre las tablas:
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoDiagram.png "Diagrama de relación")
 
+<a name="item4"></a>
 ## Interfaz
-Creamos la interfaz en Visual Studio con C #. El proyecto tiene una página de inicio de sesión, para acceder a su nombre de usuario y contraseña debe estar en la base de datos. Una vez que haya iniciado sesión, existen diferentes opciones, puede elegir entre algunas opciones:
+Creamos la interfaz en Visual Studio con C #. El proyecto tiene una página de inicio de sesión, para acceder a su nombre de usuario y contraseña debe estar en la base de datos. Una vez que que el usuario haya iniciado seción puede elegir entre alguna de las siguientes opciones:
 
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MainWindow.JPG "MainWindow")
 
@@ -52,24 +54,24 @@ Creamos la interfaz en Visual Studio con C #. El proyecto tiene una página de i
 **Cerrar sesión:** esto es para cerrar sesión en Morfeo.
 
 Todos los cambios se guardan automáticamente en nuestra base de datos.
-
+<a name="item4"></a>
 ## Capturas de Pantalla
-### Perfil
+### Muestra información personal del astronauta
 
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/MorfeoAstro.JPG "Astronauta")
-### Comida
+### Registra las comidas del día
 
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Meal.JPG "Comida")
-### Sueño
+### Regista calidad del sueño
 
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Info.JPG "Información")
 
-### Ejercicio
+### Muestra la actividad física correspondiente
 
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/Ejercicio.JPG "Ejercicio")
-### Información del viaje
+### Muestra la información del viaje
 
 ![alt text](https://github.com/dianaespinosar/Morfeo/blob/main/TripInformationEast.JPG "Viaje")
-
+<a name="item5"></a>
 ## Vídeo de YouTube
 [Click](https://youtu.be/KdlvJBqiytc)
